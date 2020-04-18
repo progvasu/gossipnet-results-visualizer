@@ -8,45 +8,746 @@
 
     <body>
         
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Gossipnet</h1>
-                <ul>
-                    <li>NMS thresholding at 0.7</li>
-                    <li>Objectness score threshold at 0.5</li>
-                </ul>
-            </div>
-        </div>
-        
         <br>
 
         <div class="row">
             <div class="col-lg-12">
-                <h3>Test dataset - Example 1</h3>
+                <h3>Example 1</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4" style="background-color: black;">
-                <img src="./gossipnet-visual/test/ex1/original.jpg" style="width:100%;">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/gtboxes.jpg" style="width:100%;">
             </div>
-            <div class="col-lg-4" style="background-color: darkgray;">
-                <img src="./gossipnet-visual/test/ex1/gt.jpg" style="width:100%;">
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/nmsboxes.jpg" style="width:100%;">
             </div>
-            <div class="col-lg-4" style="background-color: black;">
-                <img src="./gossipnet-visual/test/ex1/dets.jpg" style="width:100%;">
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/dets350.jpg" style="width:100%;">
             </div>
         </div>
+        <div></div>
         <div class="row">
-            <div class="col-lg-4" style="background-color: black;">
-                <img src="./gossipnet-visual/test/ex1/0_0.jpg" style="width:100%;">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/dets2000.jpg" style="width:100%;">
             </div>
-            <div class="col-lg-4" style="background-color: darkgray;">
-                <img src="./gossipnet-visual/test/ex1/1_0.jpg" style="width:100%">
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/cc400.jpg" style="width:100%">
             </div>
-            <div class="col-lg-4" style="background-color: black;">
-                <img src="./gossipnet-visual/test/ex1/2_0.jpg" style="width:100%">
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex1/cn2000.jpg" style="width:100%">
             </div>
         </div>
 
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex2/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 3</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex3/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 4</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex4/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 5</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex5/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 6</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex6/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 7</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex7/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 8</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex8/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 9</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex9/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 10</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex10/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 11</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex11/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 12</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex12/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 13</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex13/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 14</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex14/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 15</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex15/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 16</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex16/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 17</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex17/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 18</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex18/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 19</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex19/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Example 20</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"><b>Ground Truth</b></div>
+            <div class="col-lg-4"><b>NMS</b></div>
+            <div class="col-lg-4"><b>Top 350 detections post NMS(0.7) and object-thresholding(0.3)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/gtboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/nmsboxes.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/dets350.jpg" style="width:100%;">
+            </div>
+        </div>
+        <div></div>
+        <div class="row">
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours</b></div>
+            <div class="col-lg-4"><b>400 clusters using kmeans on top 2000 detections post NMS(0.8)</b></div>
+            <div class="col-lg-4"><b>Top 2000 detections post NMS(0.8) with top 50 neighbours in cluster(50)</b></div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/dets2000.jpg" style="width:100%;">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/cc400.jpg" style="width:100%">
+            </div>
+            <div class="col-lg-4">
+                <img src="./gossipnet-visual/ex20/cn2000.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <br>
     </body>
 </html>
